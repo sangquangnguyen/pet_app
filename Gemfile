@@ -46,6 +46,8 @@ gem 'devise'
 
 gem 'pundit'
 
+gem 'devise-jwt'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

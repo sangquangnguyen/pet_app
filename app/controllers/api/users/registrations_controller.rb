@@ -6,7 +6,7 @@ class Api::Users::RegistrationsController < Devise::RegistrationsController
   def create
     user = User.new(sign_up_params)
     if user.save
-      render json: { message: "User created successfully", user: user, token: token }, status: :created
+      render json: { message: "User created successfully", user: user }, status: :created
     else
       render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
     end
