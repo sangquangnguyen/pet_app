@@ -22,6 +22,6 @@ class Api::Users::SessionsController < Devise::SessionsController
   private
 
   def encode_jwt(user)
-    JWT.encode({ user_id: user.id, exp: 24.hours.from_now.to_i }, Rails.application.secret_key_base)
+    JWT.encode({ user_id: user.id, exp: 24.hours.from_now.to_i, jti: SecureRandom.uuid }, Rails.application.secret_key_base)
   end
 end

@@ -306,10 +306,10 @@ Devise.setup do |config|
   config.responder.redirect_status = :see_other
 
   config.jwt do |jwt|
-    jwt.secret = Rails.application.secret_key_base # Use your app's secret key
-    jwt.dispatch_requests = [['POST', %r{^/api/users/sign_in$}]]  # Define where to dispatch the JWT (e.g., login)
-    jwt.revocation_requests = [['DELETE', %r{^/api/users/sign_out$}]]  # Define where to revoke the JWT (e.g., logout)
-    jwt.expiration_time = 24.hours.to_i  # Define token expiration time
+    jwt.secret = Rails.application.secret_key_base
+    jwt.dispatch_requests = [['POST', %r{^/api/users/sign_in$}]] # Define where to dispatch the JWT (e.g., login)
+    jwt.revocation_requests = [['DELETE', %r{^/api/users/sign_out$}]] # Define where to revoke the JWT (e.g., logout)
+    jwt.expiration_time = 24.hours.to_i # Define token expiration time
   end
 
   # ==> Configuration for :registerable
