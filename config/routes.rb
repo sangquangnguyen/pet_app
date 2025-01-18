@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   namespace :api do
     devise_for :users, controllers: { sessions: 'api/users/sessions', registrations: 'api/users/registrations' }
-    resources :blogs
+    resources :blogs do
+      resources :comments
+    end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
