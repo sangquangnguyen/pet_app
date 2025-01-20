@@ -21,8 +21,12 @@ class Api::CommentsController < ApplicationController
   end
 
   def create
-    comment = get_current_user_blog.comments.build(comment_params.merge(user_id: current_user.id))
-    puts "comment: #{comment.to_json}"
+    blog = get_current_user_blog
+    if blog.nil?
+      render json: { error: "Blog not found or you are not authorized to view it." }, status: :not_found
+      return
+    end
+    comment = blog.comments.build(comment_params.merge(user_id: current_user.id))
     if comment.save
       render json: { data: comment }, status: :created
     else
