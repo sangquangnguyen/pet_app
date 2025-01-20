@@ -32,7 +32,10 @@ bundle exec rake db:create:all
 }
 ```
 
-**Log In**
+https://github.com/user-attachments/assets/d21de155-e2c5-4e98-a6dd-7ecb0e3958e6
+
+
+**Sign In**
 
 - POST /api/users/sign_in
 
@@ -45,6 +48,9 @@ bundle exec rake db:create:all
   } 
 }
 ```
+
+https://github.com/user-attachments/assets/8622db80-ca7b-4e10-a95c-64d0475ced67
+
 **Create a Blog (Authenticated)**
 
 - POST /api/blogs
@@ -58,6 +64,8 @@ bundle exec rake db:create:all
   }
 }
 ```
+
+
 **Get All Blogs**
 
 - GET /api/blogs
