@@ -54,6 +54,6 @@ class Api::BlogsController < ApplicationController
   end
 
   def get_blog
-    current_user.blogs.find(params[:id])
+    current_user.blogs.find_by(id: params[:id])
   end
 end
