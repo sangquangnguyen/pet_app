@@ -2,26 +2,26 @@
 
 Pet Project: Blog App (https://employmenthero.atlassian.net/wiki/spaces/GT/pages/3369402701/Pet+Project+Blog+App+-+Detailed+Guide)
 
-* Configuration
+## Configuration
 1. Clone this repo
 2. Open the console and type.
 ```
 bundle install
 ```
 
-* Database creation
+## Database creation
 Run command
 ```
 bundle exec rake db:create:all
 ```
 
-* APIs:
+## APIs:
 
-- Sign Up:
+**Sign Up**
 
-POST /api/users
+- POST /api/users
 
-Request body:
+- Request body:
 ```
 { 
   "user": { 
@@ -32,11 +32,11 @@ Request body:
 }
 ```
 
-- Log In:
+**Log In**
 
-POST /api/users/sign_in
+- POST /api/users/sign_in
 
-Request body:
+- Request body:
 ```
 { 
   "user": { 
@@ -45,12 +45,11 @@ Request body:
   } 
 }
 ```
+**Create a Blog (Authenticated)**
 
-- Create a Blog (Authenticated):
+- POST /api/blogs
 
-POST /api/blogs
-
-Request body:
+- Request body:
 ```
 {
   "blog": {
@@ -59,12 +58,11 @@ Request body:
   }
 }
 ```
+**Get All Blogs**
 
-- Get All Blogs:
+- GET /api/blogs
 
-GET /api/blogs
-
-Response:
+- Response:
 ```
 {
   data: [
@@ -79,12 +77,11 @@ Response:
   ]
 }
 ```
+**Get a Specific Blog by ID**
 
-- Get a Specific Blog by ID:
+- GET /api/blogs/:id
 
-GET /api/blogs/:id
-
-Response:
+- Response:
 ```
 {
   data: {
@@ -98,11 +95,11 @@ Response:
 }
 ```
 
-- Update a Blog (Authenticated, own blog only):
+**Update a Blog (Authenticated, own blog only)**
 
-PUT /api/blogs/:id
+- PUT /api/blogs/:id
 
-Request body:
+- Request body:
 ```
 {
   "blog": {
@@ -112,15 +109,15 @@ Request body:
 }
 ```
 
-- Delete a Blog (Authenticated, own blog only):
+**Delete a Blog (Authenticated, own blog only)**
 
-DELETE /api/blogs/:id
+- DELETE /api/blogs/:id
 
-- Create a Comment (Authenticated):
+**Create a Comment (Authenticated)**
 
-POST /api/blogs/:blog_id/comments
+- POST /api/blogs/:blog_id/comments
 
-Request body:
+- Request body:
 ```
 {
   "comment": {
@@ -128,12 +125,11 @@ Request body:
   }
 }
 ```
+**Get All Comments for a Blog**
 
-- Get All Comments for a Blog:
+- GET /api/blogs/:blog_id/comments
 
-GET /api/blogs/:blog_id/comments
-
-Response:
+- Response:
 ```
 {
   data: [
@@ -147,7 +143,6 @@ Response:
     }
   ]
 }
-
 ```
 
-* How to run the test suite
+## How to run the test suite
