@@ -13,6 +13,7 @@ bundle install
 Run command
 ```
 bundle exec rake db:create:all
+bundle exec rake db:migrate
 ```
 
 ## APIs:
@@ -66,6 +67,8 @@ https://github.com/user-attachments/assets/8622db80-ca7b-4e10-a95c-64d0475ced67
 ```
 
 
+https://github.com/user-attachments/assets/d6885d56-841c-4ea1-89f8-659c819c1848
+
 **Get All Blogs**
 
 - GET /api/blogs
@@ -85,6 +88,10 @@ https://github.com/user-attachments/assets/8622db80-ca7b-4e10-a95c-64d0475ced67
   ]
 }
 ```
+
+https://github.com/user-attachments/assets/e39deffc-7096-4774-8f98-f0d3c804216d
+
+
 **Get a Specific Blog by ID**
 
 - GET /api/blogs/:id
@@ -103,6 +110,10 @@ https://github.com/user-attachments/assets/8622db80-ca7b-4e10-a95c-64d0475ced67
 }
 ```
 
+
+https://github.com/user-attachments/assets/c2455db3-914c-4653-a6af-82842b542e99
+
+
 **Update a Blog (Authenticated, own blog only)**
 
 - PUT /api/blogs/:id
@@ -117,9 +128,17 @@ https://github.com/user-attachments/assets/8622db80-ca7b-4e10-a95c-64d0475ced67
 }
 ```
 
+
+https://github.com/user-attachments/assets/b0f4d721-5fc4-4984-bbcf-4103f400bc78
+
+
 **Delete a Blog (Authenticated, own blog only)**
 
 - DELETE /api/blogs/:id
+
+
+https://github.com/user-attachments/assets/de90d927-b080-4d12-a46e-4ae1d1fb7fa8
+
 
 **Create a Comment (Authenticated)**
 
@@ -133,6 +152,11 @@ https://github.com/user-attachments/assets/8622db80-ca7b-4e10-a95c-64d0475ced67
   }
 }
 ```
+
+
+https://github.com/user-attachments/assets/0bcc5f03-bb0f-4c8f-925b-d3c86fd618d7
+
+
 **Get All Comments for a Blog**
 
 - GET /api/blogs/:blog_id/comments
@@ -153,4 +177,13 @@ https://github.com/user-attachments/assets/8622db80-ca7b-4e10-a95c-64d0475ced67
 }
 ```
 
+
+https://github.com/user-attachments/assets/479b415c-cabb-47aa-be48-321c288b36e0
+
+
+
 ## How to run the test suite
+
+```
+bundle exec rspec
+```
