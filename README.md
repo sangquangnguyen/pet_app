@@ -177,10 +177,7 @@ https://github.com/user-attachments/assets/0bcc5f03-bb0f-4c8f-925b-d3c86fd618d7
 }
 ```
 
-
-https://github.com/user-attachments/assets/479b415c-cabb-47aa-be48-321c288b36e0
-
-
+https://github.com/user-attachments/assets/8999d08c-f265-4a27-9a46-c62df2cb1edc
 
 ## How to run the test suite
 
