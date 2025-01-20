@@ -28,11 +28,11 @@ RSpec.describe Api::BlogsController, type: :controller do
   end
 
   describe 'POST #create' do
-    let(:valid_params) { { blog: { title: 'New Blog', content: 'Blog content' } } }
+    let(:params) { { blog: { title: 'New Blog', content: 'Blog content' } } }
 
     it 'creates a new blog with valid parameters' do
       expect {
-        post :create, params: valid_params
+        post :create, params: params
       }.to change(Blog, :count).by(1)
 
       expect(response).to have_http_status(:created)
@@ -77,10 +77,10 @@ RSpec.describe Api::BlogsController, type: :controller do
   end
 
   describe 'PUT #update' do
-    let(:valid_params) { { id: blog.id, blog: { title: 'Updated Title', content: 'Updated content' } } }
+    let(:params) { { id: blog.id, blog: { title: 'Updated Title', content: 'Updated content' } } }
 
     it 'updates the blog if it belongs to the current user and parameters are valid' do
-      put :update, params: valid_params
+      put :update, params: params
 
       expect(response).to have_http_status(:success)
       expect(blog.reload.title).to eq('Updated Title')
