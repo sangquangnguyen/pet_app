@@ -4,7 +4,7 @@ Pet Project: Blog App (https://employmenthero.atlassian.net/wiki/spaces/GT/pages
 
 ## Configuration
 1. Clone this repo
-2. Open the console and type.
+2. Open the console and run the below command.
 ```
 bundle install
 ```
